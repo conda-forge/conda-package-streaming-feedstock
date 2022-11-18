@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-streaming/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  sha256: 14a81aa74de6060d0418178da8f96c31b5eec4474660513a2672f715aec2970c
 
 build:
   script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
