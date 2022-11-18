@@ -1,13 +1,13 @@
 {% set name = "conda-package-streaming" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/conda-incubator/conda-package-streaming/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6c43a077a5e478b4ad0ca2f569e11ddc37224fb385db3013fb05500d3ae75ca9
+  url: https://github.com/conda/conda-package-streaming/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 14a81aa74de6060d0418178da8f96c31b5eec4474660513a2672f715aec2970c
 
 build:
   script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - flit-core
-    - python >=3.9
+    - python >=3.7
     - pip
   run:
     - zstandard >=0.15
     - requests
-    - python >=3.9
+    - python >=3.7
 
 test:
   imports:
@@ -33,12 +33,12 @@ test:
     - pip
 
 about:
-  home: https://github.com/conda-incubator/conda-package-streaming
+  home: https://github.com/conda/conda-package-streaming
   summary: Download metadata from conda packages without transferring entire file.
   license: BSD-3-Clause
   license_file: LICENSE
-  doc_url: https://conda-incubator.github.io/conda-package-streaming/
-  dev_url: https://github.com/conda-incubator/conda-package-streaming
+  doc_url: https://conda.github.io/conda-package-streaming/
+  dev_url: https://github.com/conda/conda-package-streaming
 
 extra:
   recipe-maintainers:
