@@ -1,7 +1,7 @@
 About conda-package-streaming
 =============================
 
-Home: https://github.com/conda-incubator/conda-package-streaming
+Home: https://github.com/conda/conda-package-streaming
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-package-s
 
 Summary: Download metadata from conda packages without transferring entire file.
 
-Development: https://github.com/conda-incubator/conda-package-streaming
+Development: https://github.com/conda/conda-package-streaming
 
-Documentation: https://conda-incubator.github.io/conda-package-streaming/
+Documentation: https://conda.github.io/conda-package-streaming/
 
 Current build status
 ====================
