@@ -1,5 +1,5 @@
 {% set name = "conda-package-streaming" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-streaming/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a454def50ab1b69b267c15ef5d97f3b7f492b643694d289d3a9231e8aeaf8943
+  sha256: 55f465e108f3f5acfbbd0331c6a42acd81d998a1706809883014058d2790aa9c
 
 build:
   script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
