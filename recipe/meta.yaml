@@ -11,17 +11,17 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - flit-core
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
     - zstandard >=0.15
-    - python >=3.7
+    - python >={{ python_min }}
     # 'requests' is optional, only needed for 'url' submodule
 
 test:
@@ -32,6 +32,7 @@ test:
   requires:
     - pip
     - requests
+    - python {{ python_min }}
 
 about:
   home: https://github.com/conda/conda-package-streaming
