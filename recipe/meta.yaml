@@ -20,7 +20,7 @@ requirements:
     - python {{ python_min }}
     - pip
   run:
-    - zstandard >=0.15
+    - backports.zstd
     - python >={{ python_min }}
     # 'requests' is optional, only needed for 'url' submodule
 
