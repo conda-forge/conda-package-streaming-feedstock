@@ -1,5 +1,5 @@
 {% set name = "conda-package-streaming" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-streaming/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2cd261d3bc3bd4c51e2bb84a8397b6cc1b591f837838439d4befc12fc3d77314
+  sha256: a58868bedb6231485008c6fef0326900cd6fab51b6ed9942457100836c5c8588
 
 build:
   script: {{ PYTHON }} -m pip install --no-build-isolation . -vv
@@ -20,7 +20,7 @@ requirements:
     - python {{ python_min }}
     - pip
   run:
-    - zstandard >=0.15
+    - backports.zstd
     - python >={{ python_min }}
     # 'requests' is optional, only needed for 'url' submodule
 
